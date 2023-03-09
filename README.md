@@ -1,4 +1,4 @@
-# GitModel
+# GitModel 🥳
 GitModel is for dynamically generating high quality heirarchical topic tree representations of github repos using customizable GNN layers. 
 
 - Highly customizable philospophy. Goal to support huggingface, openai, cohere, etc. python, js, c, c++, C#, etc
@@ -11,6 +11,37 @@ GitModel is for dynamically generating high quality heirarchical topic tree repr
 
 
 ## Examples
+## Gitmodel
+```
+.
+├─Outlier Reduction with Topic Modeling Libraries____
+│    ├─Document reduction with hierarchical clustering and TF-IDF feature extraction____
+│    │    ├─■──Hierarchical Topic Modeling with Document Embeddings____ ── Topic: 2
+│    │    └─■──Document processing with NLP techniques____ ── Topic: 10
+│    └─Reducing Outliers in BERTopic Generated Topics using a Memory Tree Hierarchical Approach____
+│         ├─■──BERTopic model reduces outliers in generated topics____ ── Topic: 5
+│         └─■──Memory tree generation with hierarchical topic modeling using BERTopic in GitModel____ ── Topic: 9
+└─Embedding text data using MiniLM language model.____
+     ├─Text embedding with MiniLM language model____
+     │    ├─■──MiniLM language model for sentence embedding____ ── Topic: 12
+     │    └─Computing Gaussian kernel matrix between two sets of embeddings using PyTorch____
+     │         ├─Computing Gaussian kernel matrix between two sets of embeddings using PyTorch____
+     │         │    ├─■──Computing Gaussian kernel matrix using PyTorch on two sets of embeddings____ ── Topic: 1
+     │         │    └─■──Computing graph Laplacian and degree matrix from pairwise distances using numpy____ ── Topic: 4
+     │         └─■──Probability density estimation using Gaussian KDE____ ── Topic: 13
+     └─Extracting code summary prompts from GitHub repositories using ChatGPT engine____
+          ├─ChatGPT-based Code Summarization for GitHub Repositories____
+          │    ├─■──OpenAI GPT-3.5-Turbo model for chat response inference with `chat_gpt_inference` function.____ ── Topic: 11
+          │    └─■──Generating System Prompts for ChatGPT____ ── Topic: 3
+          └─Code decomposition and system prompts formatting in a Git repository____
+               ├─Code decomposition and system prompts formatting in Python____
+               │    ├─■──Function purpose and step-by-step guide for repo graph generation in Python file.____ ── Topic: 6
+               │    └─Issues with a function for decomposing code in a git repository and formatting system prompts.____
+               │         ├─■──Understanding the MemoryTreeManager and MessageTreeManagerConfiguration classes in the GitModel repo ── Topic: 8
+               │         └─■──Issues with a function for decomposing a GitHub repository into topics____ ── Topic: 0
+               └─■──Running SQLAlchemy Migrations in Online Mode with Alembic____ ── Topic: 7
+```
+
 ### DeepMind CLRS 
 - https://github.com/deepmind/clrs
 
