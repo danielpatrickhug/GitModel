@@ -23,7 +23,7 @@ This is a great guide for how to make a pull request
 ### Gitmodel
 
 - https://github.com/danielpatrickhug/GitModel
-- uses Deepminds clrs topic tree in system prompt during graph generation
+- uses Deepminds clrs topic tree in system prompt during semantic graph generation
 
 ```
 .
