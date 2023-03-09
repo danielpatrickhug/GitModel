@@ -1,0 +1,2 @@
+class MemoryTreeManager:
+    pass

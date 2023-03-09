@@ -1,0 +1,4 @@
+bertopic
+matplotlib
+openai
+sentence-transformers
