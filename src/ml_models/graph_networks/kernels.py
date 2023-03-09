@@ -118,7 +118,7 @@ def prune_ref_docs(qa_embs, ref_embs, ref_docs, threshold=0.1):
     return pruned_ref_embs, pruned_ref_docs, pruned_A
 
 
-def compute_cos_sim_kernel(embs, threshold=0.65, kernel_type="cosine", sigma=1.0):
+def compute_kernel_by_type(embs, threshold=0.65, kernel_type="cosine", sigma=1.0):
     # match case to kernel type
     if kernel_type == "gaussian":
         A = gaussian_kernel_torch(embs, embs, sigma)
@@ -132,7 +132,7 @@ def compute_cos_sim_kernel(embs, threshold=0.65, kernel_type="cosine", sigma=1.0
 
 
 def compute_kernel(embs):
-    # match case to kernel type
+    # TODO match case to kernel type
     A = cos_sim(embs, embs)
     adj_matrix = A.numpy().astype(np.float32)
     return adj_matrix
