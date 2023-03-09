@@ -5,6 +5,7 @@ representations of github repos using customizable GNN message passing layers.
 
 - Highly customizable philospophy. Goal to support huggingface, openai, cohere,
   etc. python, js, c, c++, C#, etc
+- generate semantic graphs over codebases
 - BERTopic is highly customizable and can compose several different clustering, embedding, vectorizers, bag of words
   and dimensionality reduction techniques.
  - Change optics by swapping categorical objects in the pipeline swap umap_hdbscan with svd_kmeans or transform adj_matrix to graph laplacian 
