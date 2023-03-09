@@ -1,4 +1,7 @@
 bertopic
-matplotlib
+numpy
 openai
+pandas
+scipy
 sentence-transformers
+torch
