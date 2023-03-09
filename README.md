@@ -7,6 +7,7 @@ representations of github repos using customizable GNN layers.
   etc. python, js, c, c++, C#, etc
 - BERTopic is highly customizable and can compose several different clustering
   and dimensionality reduction techniques.
+ - Topic modeling pipeline is an inductive bias
 
 "Memory" Tree representations can be dynamically selected and added to the
 system prompt augmenting text generation.
