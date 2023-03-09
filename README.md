@@ -32,6 +32,8 @@ GitModel is for dynamically generating high quality heirarchical topic tree repr
           └─■──Probability density estimation of distance scores using Gaussian kernel density estimation____ ── Topic: 7
 ```
 
+TODO: Clean, organize code. come up with better code structure abstractions.
+
 ### DeepMind CLRS 
 - https://github.com/deepmind/clrs
 
