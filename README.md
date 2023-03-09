@@ -1,4 +1,4 @@
-# GitModel 🥳
+# GitModel 
 GitModel is for dynamically generating high quality heirarchical topic tree representations of github repos using customizable GNN layers. 
 
 - Highly customizable philospophy. Goal to support huggingface, openai, cohere, etc. python, js, c, c++, C#, etc
