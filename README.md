@@ -348,3 +348,148 @@ With topic tree in system prompt
                └─■──Anthropic Large Language Models and API Usage in AtlasDB Project Management____ ── Topic: 83
 
 ```
+
+## Pyknotid 
+- https://pyknotid.readthedocs.io/en/latest/
+```
+
+└─Calculation of Alexander polynomial for knots in Python and Mathematica.____
+     ├─Alexander polynomial calculation using Mathematica process and knot routing algorithm with various p
+     │    ├─Calculation of Alexander polynomial for knots using Python and Mathematica representations____
+     │    │    ├─CellKnot object initialization and properties with sin, cos, linspace, phi, psi, theta, rotation, pe
+     │    │    │    ├─Mollweide projection and spherical coordinates____
+     │    │    │    │    ├─Rotation of Spheres using Rotation Matrices____
+     │    │    │    │    │    ├─■──Rotation of sphere to align given positions at the top____ ── Topic: 41
+     │    │    │    │    │    └─■──Rotation matrix computation and manipulation using iterable angles.____ ── Topic: 18
+     │    │    │    │    └─Mollweide projection and conversion of spherical coordinates____
+     │    │    │    │         ├─Mollweide projection and spherical coordinates conversion____
+     │    │    │    │         │    ├─■──Vector magnitude calculation, Mollweide projection, and well-written code in Python.____ ── Topic: 51
+     │    │    │    │         │    └─■──"Mollweide projection and spherical coordinate conversion"____ ── Topic: 30
+     │    │    │    │         └─■──Verbose printing function for Pyknotid counters.____ ── Topic: 10
+     │    │    │    └─CellKnot class and points folding____
+     │    │    │         ├─CellKnot and Knot Folding____
+     │    │    │         │    ├─■──Understanding the "cell_trefoil" function and the "aperiodic_trefoil" function for creating interpol ── Topic: 37
+     │    │    │         │    └─■──CellKnot class and related methods____ ── Topic: 33
+     │    │    │         └─3D geometric scaling with numpy and crossing signs____
+     │    │    │              ├─Geometric Transformation with Crossing Signs____
+     │    │    │              │    ├─■──Numpy arrays for creating and perturbing a simple link using sin and cos in Python code.____ ── Topic: 15
+     │    │    │              │    └─■──Geometric transformation with crossing signs and np array____ ── Topic: 3
+     │    │    │              └─■──3D point scaling helper functions in p4_3__1, p4_4__1, p4_5__1_false, p5_3__1 and p5_4__1.____ ── Topic: 47
+     │    │    └─Knot representations and calculation of Alexander polynomial using Python and Mathematica____
+     │    │         ├─Line Segment Open by Distance Generator____
+     │    │         │    ├─Issues with missing function definitions and potential bugs in serialisation functions.____
+     │    │         │    │    ├─■──JSON and polynomial serialisation with potential implementation issues____ ── Topic: 17
+     │    │         │    │    └─■──Issues with incomplete function for serialising Jones polynomials in Python____ ── Topic: 36
+     │    │         │    └─Line vectors open by distance fraction with seed and number of segments as parameters.____
+     │    │         │         ├─Line segment manipulation and generation____
+     │    │         │         │    ├─Line Segments and Open/Closed Loop Detection____
+     │    │         │         │    │    ├─■──Open and closed line segments generation with distance constraint.____ ── Topic: 5
+     │    │         │         │    │    └─■──Writing Mathematica code to file and running it using MathKernel____ ── Topic: 28
+     │    │         │         │    └─Loading and manipulating CSV files with Pandas and saving to JSON.____
+     │    │         │         │         ├─■──Writing and loading data in json format with numpy and handling file paths (filenotfounderror explan ── Topic: 14
+     │    │         │         │         └─■──Parsing CSV data using pandas in Python____ ── Topic: 19
+     │    │         │         └─Downloading Knots Database with Pyknotid Library.____
+     │    │         │              ├─Knots database download and management____
+     │    │         │              │    ├─■──Downloading Knots Database using Pyknotid Library____ ── Topic: 23
+     │    │         │              │    └─■──Deleting old versions of database files in specific format using Python.____ ── Topic: 44
+     │    │         │              └─■──Recursive file inclusion using fnmatch patterns in Python____ ── Topic: 43
+     │    │         └─Alexander polynomial computation using Mathematica for knot representations____
+     │    │              ├─Calculation of Alexander polynomial using Python and Mathematica code snippets.____
+     │    │              │    ├─MeshCollectionVisual class and associated methods for vertex colors and shading in mesh visualizatio
+     │    │              │    │    ├─Code Refactoring and Todo Tasks with Comments and Unit Tests____
+     │    │              │    │    │    ├─■──Classes and functionality for handling periodic boundary conditions in a 2D space.____ ── Topic: 39
+     │    │              │    │    │    └─■──Code Refactoring and Unit Testing____ ── Topic: 4
+     │    │              │    │    └─MeshCollectionVisual class and vertex colors in 3D mesh visualization.____
+     │    │              │    │         ├─Signal Smoothing with Window Functions____
+     │    │              │    │         │    ├─■──Testing vector intersection in a dp/dq region using do_vectors_intersect function and obtaining bool ── Topic: 20
+     │    │              │    │         │    └─signal smoothing with different windows and sizes____
+     │    │              │    │         │         ├─■──Signal Smoothing using Different Windows____ ── Topic: 49
+     │    │              │    │         │         └─■──Code organization and readability of periodic_vassiliev_degree_2 function in adherence with PEP 8 gu ── Topic: 26
+     │    │              │    │         └─MeshCollectionVisual class and related methods____
+     │    │              │    │              ├─■──MeshCollectionVisual class and its methods for mesh visualization and handling vertex colors and sha ── Topic: 9
+     │    │              │    │              └─■──Cell object for lines with periodic boundary conditions____ ── Topic: 45
+     │    │              │    └─Alexander polynomial calculation using Mathematica____
+     │    │              │         ├─Calculating the Alexander polynomial of knots using various representations____
+     │    │              │         │    ├─Gauss code conversion to crossing indices____
+     │    │              │         │    │    ├─Recommendations for the "mag" function implementation in periodic.py____
+     │    │              │         │    │    │    ├─■──Implementing vector magnitude using dot product in Pyknotid____ ── Topic: 8
+     │    │              │         │    │    │    └─■──Improving code with imports and using numpy.zeros instead of n.zeros.____ ── Topic: 50
+     │    │              │         │    │    └─■──Converting Gauss code to crossings in a crossing object____ ── Topic: 22
+     │    │              │         │    └─Calculation of Alexander polynomial using Mathematica for knot representations____
+     │    │              │         │         ├─Knot theory and Alexander polynomial calculation using Mathematica____
+     │    │              │         │         │    ├─■──BoundingBox class implementation in Python with numpy and axis manipulation____ ── Topic: 1
+     │    │              │         │         │    └─■──Calculation of Alexander polynomial for knot representations using Mathematica____ ── Topic: 0
+     │    │              │         │         └─3D sphere plotting with Mollweide projection using VisPy____
+     │    │              │         │              ├─■──"3D visualization of spherical data using VisPy and Mollweide projection"____ ── Topic: 2
+     │    │              │         │              └─■──Class definition of MeshCollectionVisual that creates a mesh by concatenating visuals' vertices, ind ── Topic: 12
+     │    │              │         └─Database objects matching invariants using Python code____
+     │    │              │              ├─Database objects and invariants in knot theory____
+     │    │              │              │    ├─■──"Database storage and manipulation of knots using Peewee and optimized Cython routines"____ ── Topic: 35
+     │    │              │              │    └─■──Database searching with invariants in Python____ ── Topic: 7
+     │    │              │              └─■──OpenKnot class for holding vertices of an open curve in spacecurves module____ ── Topic: 38
+     │    │              └─Parsing data files and visualizing with matplotlib and mayavi/vispy.____
+     │    │                   ├─Code for drawing bounding boxes in 3D using VisPy____
+     │    │                   │    ├─Plotting Lissajous Conformation with Vispy and Mayavi Toolkits____
+     │    │                   │    │    ├─■──Plotting Lissajous conformations with plot_cell using Vispy and Mayavi toolkits____ ── Topic: 13
+     │    │                   │    │    └─■──Understanding the plot_line() function in pyknotid's visualise.py and its 3D plotting toolkits (Maya ── Topic: 27
+     │    │                   │    └─■──Bounding box visualization with VisPy____ ── Topic: 32
+     │    │                   └─Analyzing knot type of curve in a data file using argparse parser and VisPy canvas plotting.____
+     │    │                        ├─■──Plotting 2D projections with optional markers in Python using pyplot____ ── Topic: 48
+     │    │                        └─Analysis of knot types in data files using argparse and vispy_canvas.____
+     │    │                             ├─■──Working with VisPy Canvas and Scene objects____ ── Topic: 40
+     │    │                             └─■──Parsing and analyzing knot types in data files using argparse____ ── Topic: 42
+     │    └─Alternative Periodic Vassiliev Function with Conway Notation (Degree 4, Z4 Coefficients) and Core Cr
+     │         ├─■──Calculation of writhing numbers using Arrow diagrams and Gauss codes____ ── Topic: 16
+     │         └─Alternative periodic Vassiliev function for Conway notation with z4 coefficients and related invaria
+     │              ├─■──Arnold's invariants and their calculation by transforming representation into an unknot____ ── Topic: 6
+     │              └─■──Alternative periodic Vassiliev function in pyknotid with Conway notation and Z4 coefficients____ ── Topic: 11
+     └─"Calculating higher order writhe integrals using numpy and cython"____
+          ├─Calculation of Higher Order Writhe Integral with NumPy and Cython Implementation.____
+          │    ├─Calculation of higher order writhe integral using points and order contributions____
+          │    │    ├─■──higher_order_writhe_integral function implementation with numpy____ ── Topic: 29
+          │    │    └─■──Writhing matrix and coefficient calculations for points in 3-dimensional space____ ── Topic: 46
+          │    └─■──Calculation of Writhe and Average Crossing Number using Integral____ ── Topic: 21
+          └─■──Distance Quantity Calculation from Curve Integral____ ── Topic: 31
+```
+
+## PyReason
+- https://github.com/lab-v2/pyreason
+```
+.
+├─Updating Interpretations Graph with Nodes and Edges____
+│    ├─Analysis of Python code implementing a graph data structure and functions to add nodes and edges, us
+│    │    ├─■──Code Refactoring and Commenting, Handling None Values in Python Code____ ── Topic: 10
+│    │    └─Code analysis and review of a function for adding edges and nodes to a graph, including checking for
+│    │         ├─■──Positive aspects of a codebase with clear and descriptive function names and variable names.____ ── Topic: 4
+│    │         └─■──Methods for adding edges to a graph with considerations for existing nodes and labels.____ ── Topic: 11
+│    └─Updating nodes and edges in a graph with rule trace and atom trace, using Numba for optimization____
+│         ├─Python functions for updating rule traces with graph attributes____
+│         │    ├─■──Updating nodes with rules and traces in a converging system.____ ── Topic: 15
+│         │    └─■──Interpretation of Graph Labels Using Numba in Python____ ── Topic: 5
+│         └─analysis of profiling data for program optimization____
+│              ├─■──Parsing YAML to create a list of rules____ ── Topic: 9
+│              └─■──Parsing and Profiling Data from CSV files in Python____ ── Topic: 1
+└─Python Object Getter Implementation for Fact Objects____
+     ├─Python code structure and implementation in pyreason's numba_wrapper lib____
+     │    ├─Functions and objects in pyreason's numba_wrapper module that return nested functions and implement 
+     │    │    ├─■──Function for getting time lower and upper bounds from a fact object____ ── Topic: 14
+     │    │    └─Higher-order functions in rule_type.py for accessing fields of a rule object in pyreason/pyreason/sc
+     │    │         ├─Python classes and object-oriented programming concepts with "Fact" class examples.____
+     │    │         │    ├─■──Nested function type checking with isinstance in Python____ ── Topic: 8
+     │    │         │    └─■──Class Fact and its attributes and methods.____ ── Topic: 7
+     │    │         └─Numba implementation functions for label and world types in PyReason____
+     │    │              ├─Higher-order functions for getting attributes of rules in PyReason's numba_types module____
+     │    │              │    ├─■──Code structure and naming conventions in pyreason's numba_wrapper/numpy_types directory____ ── Topic: 6
+     │    │              │    └─■──Implementation details of the `get_target_criteria` function and `unbox_rule` in rule_type.py____ ── Topic: 0
+     │    │              └─■──Implementation of interval methods in pyreason using numba_wrapper____ ── Topic: 2
+     │    └─Compliments on codebase functions for calculating minimum, maximum, average, and average lower using
+     │         ├─■──Implementing a reset function to update the bounds of an interval object in Python____ ── Topic: 18
+     │         └─■──Compliments on Function Names and Docstrings for Array Calculation Functions____ ── Topic: 13
+     └─Working with pyapi and objects in Python code____
+          ├─Understanding a Python code snippet for unboxing facts with structmodels____
+          │    ├─■──Object Unboxing and Attribute Retrieval in Python with PyAPI____ ── Topic: 17
+          │    └─Numba code for creating and boxing a struct model instance____
+          │         ├─■──Code snippet for creating a struct proxy and boxing its components in Numba.____ ── Topic: 3
+          │         └─■──Python class RuleModel with labeled attributes and types____ ── Topic: 12
+          └─■──Functions for creating and boxing objects in a Python-C++ interface____ ── Topic: 16
+```
