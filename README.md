@@ -13,7 +13,7 @@ system prompt augmenting text generation.
 
 ## Examples
 
-## Gitmodel
+### Gitmodel
 
 - https://github.com/danielpatrickhug/GitModel
 - uses Deepminds clrs topic tree in system prompt during graph generation
@@ -88,7 +88,7 @@ TODO: Clean, organize code. come up with better code structure abstractions.
                └─■──Sampling classes and their data generation purpose____ ── Topic: 12
 ```
 
-With topic tree in system prompt
+- generation augmented with the above topic tree in system prompt
 
 ```
 .
