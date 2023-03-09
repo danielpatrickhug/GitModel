@@ -13,6 +13,7 @@ GitModel is for dynamically generating high quality heirarchical topic tree repr
 ## Examples
 ## Gitmodel
 - https://github.com/danielpatrickhug/GitModel
+- uses Deepminds clrs topic tree
 ```
 .
 ├─■──Parsing Python code using abstract syntax trees (AST) and extracting methods____ ── Topic: 5
