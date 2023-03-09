@@ -8,7 +8,7 @@ representations of github repos using customizable GNN message passing layers.
 - BERTopic is highly customizable and can compose several different clustering, embedding, vectorizers, bag of words
   and dimensionality reduction techniques.
  - Change optics by swapping categorical objects in the pipeline swap umap_hdbscan with svd_kmeans or transform adj_matrix to graph laplacian 
- - Topic modeling pipeline is an inductive bias
+ - GNN and Topic modeling pipeline as an inductive bias
 
 
 "Memory" Tree representations can be dynamically selected and added to the
