@@ -7,7 +7,7 @@ representations of github repos using customizable GNN layers.
   etc. python, js, c, c++, C#, etc
 - BERTopic is highly customizable and can compose several different clustering
   and dimensionality reduction techniques.
- - Change optics by swapping objects in the pipeline swap umap_hdbscan with svd_kmeans or swap adj_matrix with graph laplacian
+ - TODO: Change optics by swapping objects in the pipeline swap umap_hdbscan with svd_kmeans or swap adj_matrix with graph laplacian
  - Topic modeling pipeline is an inductive bias
  
 
