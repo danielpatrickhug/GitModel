@@ -12,8 +12,23 @@ GitModel is for dynamically generating high quality heirarchical topic tree repr
 
 ## Examples
 ## Gitmodel
+- https://github.com/danielpatrickhug/GitModel
 ```
-
+.
+├─■──Parsing Python code using abstract syntax trees (AST) and extracting methods____ ── Topic: 5
+└─Repository graph generation and topic modeling using embeddings, adjacency lists, and hierarchical t
+     ├─Functions for formatting system prompts and decomposing repositories in ChatGPT-based conversational
+     │    ├─■──Understanding database migrations in offline and online mode using SQLAlchemy and Alembic____ ── Topic: 4
+     │    └─Functions and System Prompts for Code Repositories and ChatGPT____
+     │         ├─Documenting GitHub Repositories with ChatGPT____
+     │         │    ├─■──Parsing and Decomposing Contents of a Git Repository in Python____ ── Topic: 1
+     │         │    └─■──Codebase Summary and Conversation Template Generation with System Prompts for ChatGPT____ ── Topic: 2
+     │         └─■──Using OpenAI GPT-3.5-Turbo model for chat response generation in Python____ ── Topic: 6
+     └─Document pruning and Gaussian kernel computation using PyTorch in a topic model.____
+          ├─Document pruning and adjacency matrix computation in GitModel____
+          │    ├─■──Document pruning and Gaussian kernel computation for topic modeling using PyTorch embeddings____ ── Topic: 0
+          │    └─■──Computing k-hop adjacency matrix and aggregated features using message passing for a graph____ ── Topic: 3
+          └─■──Probability density estimation of distance scores using Gaussian kernel density estimation____ ── Topic: 7
 ```
 
 ### DeepMind CLRS 
