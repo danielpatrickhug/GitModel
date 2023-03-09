@@ -16,7 +16,7 @@ GitModel is for dynamically generating high quality heirarchical topic tree repr
 ```
 .
 ├─■──Parsing Python code using abstract syntax trees (AST) and extracting methods____ ── Topic: 5
-└─Repository graph generation and topic modeling using embeddings, adjacency lists, and hierarchical t
+└─Repository graph generation and topic modeling using embeddings, adjacency maps, and hierarchical topic trees
      ├─Functions for formatting system prompts and decomposing repositories in ChatGPT-based conversational
      │    ├─■──Understanding database migrations in offline and online mode using SQLAlchemy and Alembic____ ── Topic: 4
      │    └─Functions and System Prompts for Code Repositories and ChatGPT____
