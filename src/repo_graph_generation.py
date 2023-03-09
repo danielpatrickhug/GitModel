@@ -1,5 +1,6 @@
-from ast_parsers.python_ast_parser import get_methods, parse_github_repo
 from models.transformers.chatgpt_api_inference import process_transcript
+
+from ast_parsers.python_ast_parser import get_methods, parse_github_repo
 from system_prompts.format_system_prompts import format_system_prompts, format_system_prompts_with_tree
 
 
