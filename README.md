@@ -14,6 +14,9 @@ representations of github repos using customizable GNN message passing layers.
 "Memory" Tree representations can be dynamically selected and added to the
 system prompt augmenting text generation.
 
+Contributions Welcome!
+This is a great guide for how to make a pull request
+- https://github.com/huggingface/diffusers/blob/main/CONTRIBUTING.md
 ## Examples
 
 ### Gitmodel
