@@ -9,7 +9,7 @@ representations of github repos using customizable GNN message passing layers.
   and dimensionality reduction techniques.
  - TODO: Change optics by swapping objects in the pipeline swap umap_hdbscan with svd_kmeans or swap adj_matrix with graph laplacian
  - Topic modeling pipeline is an inductive bias
- 
+
 
 "Memory" Tree representations can be dynamically selected and added to the
 system prompt augmenting text generation.
