@@ -95,7 +95,7 @@ TODO: Clean, organize code. come up with better code structure abstractions.
                └─■──Sampling classes and their data generation purpose____ ── Topic: 12
 ```
 
-- generation augmented with the above topic tree in system prompt
+- recurrent generation augmented with the above topic tree in system prompt
 
 ```
 .
