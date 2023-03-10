@@ -6,11 +6,12 @@ representations of github repos using customizable GNN message passing layers.
 - Highly customizable philospophy. Goal to support OpenAssistant, LAION OIG, Huggingface, Openai, Cohere,
   etc. python, js, c, c++, C#, etc
 - Swap system prompt tasks(bug hunting, todo, documentation labeling, etc) for enriching semantic graph
+- GNN Message Passing and Topic modeling pipeline as an inductive bias (GRNN)
 - BERTopic is highly customizable and can compose several different clustering,
   embedding, vectorizers, bag of words and dimensionality reduction techniques.
 - Change optics by swapping categorical objects in the pipeline swap
   umap_hdbscan with svd_kmeans or transform adj_matrix to graph laplacian
-- GNN and Topic modeling pipeline as an inductive bias (GRNN)
+
 
 "Memory" Tree representations can be dynamically selected and added to the
 system prompt augmenting text generation.
