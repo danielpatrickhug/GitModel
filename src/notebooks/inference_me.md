@@ -82,6 +82,11 @@ embs = embed_data(data, model_name=MODEL_NAME)
 A = compute_kernel_by_type(embs, threshold=0.6, kernel_type="cosine")
 A_k, agg_features = k_hop_message_passing_sparse(A, embs, 2)
 ```
+Graph Laplacian
+```python
+L, D = graph_laplacian(A)
+L_k, D_k = graph_laplacian(A_k)
+```
 SVD
 
 ```python
