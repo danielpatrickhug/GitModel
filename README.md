@@ -7,6 +7,7 @@ representations of github repos using customizable GNN message passing layers.
   etc. python, js, c, c++, C#, etc
 - Swap system prompt tasks(bug hunting, todo, documentation labeling, etc) for enriching semantic graph
 - GNN Message Passing and Topic modeling pipeline as an inductive bias (GRNN)
+- SVD for componenent analysis
 - BERTopic is highly customizable and can compose several different clustering,
   embedding, vectorizers, bag of words and dimensionality reduction techniques.
 - Change optics by swapping categorical objects in the pipeline swap
