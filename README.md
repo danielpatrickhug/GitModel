@@ -3,23 +3,29 @@
 GitModel is for dynamically generating high quality heirarchical topic tree
 representations of github repos using customizable GNN message passing layers.
 
-- Highly customizable philospophy. Goal to support huggingface, openai, cohere,
+- Highly customizable philospophy. Goal to support OpenAssistant, LAION OIG, Huggingface, Openai, Cohere,
   etc. python, js, c, c++, C#, etc
+- Swap system prompt tasks(bug hunting, todo, documentation labeling, etc) for enriching semantic graph
+- GNN Message Passing and Topic modeling pipeline as an inductive bias (GRNN)
+- SVD for componenent analysis
 - BERTopic is highly customizable and can compose several different clustering,
   embedding, vectorizers, bag of words and dimensionality reduction techniques.
 - Change optics by swapping categorical objects in the pipeline swap
   umap_hdbscan with svd_kmeans or transform adj_matrix to graph laplacian
-- GNN and Topic modeling pipeline as an inductive bias
+
 
 "Memory" Tree representations can be dynamically selected and added to the
 system prompt augmenting text generation.
 
+Contributions Welcome!
+This is a great guide for how to make a pull request
+- https://github.com/huggingface/diffusers/blob/main/CONTRIBUTING.md
 ## Examples
 
 ### Gitmodel
 
 - https://github.com/danielpatrickhug/GitModel
-- uses Deepminds clrs topic tree in system prompt during graph generation
+- uses Deepminds clrs topic tree in system prompt during semantic graph generation
 
 ```
 .
@@ -39,7 +45,7 @@ system prompt augmenting text generation.
           └─■──Probability density estimation of distance scores using Gaussian kernel density estimation____ ── Topic: 7
 ```
 
-TODO: Clean, organize code. come up with better code structure abstractions.
+
 
 ### DeepMind CLRS
 
@@ -91,7 +97,7 @@ TODO: Clean, organize code. come up with better code structure abstractions.
                └─■──Sampling classes and their data generation purpose____ ── Topic: 12
 ```
 
-- generation augmented with the above topic tree in system prompt
+- recurrent generation augmented with the above topic tree in system prompt
 
 ```
 .
