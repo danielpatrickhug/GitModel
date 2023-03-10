@@ -43,7 +43,7 @@ This is a great guide for how to make a pull request
           └─■──Probability density estimation of distance scores using Gaussian kernel density estimation____ ── Topic: 7
 ```
 
-TODO: Clean, organize code. come up with better code structure abstractions.
+
 
 ### DeepMind CLRS
 
