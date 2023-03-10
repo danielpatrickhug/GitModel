@@ -80,7 +80,8 @@ data["_id"] = data.index
 MODEL_NAME = "all-MiniLM-L6-v2"  # "allenai-specter"#
 embs = embed_data(data, model_name=MODEL_NAME)
 A = compute_kernel_by_type(embs, threshold=0.6, kernel_type="cosine")
-A_k, agg_features = k_hop_message_passing_sparse(A, embs, 2)
+k=2
+A_k, agg_features = k_hop_message_passing_sparse(A, embs, k)
 ```
 Graph Laplacian
 ```python
@@ -103,10 +104,10 @@ plt.show()
 
 ```python
 U_k, S_k, VT_k = np.linalg.svd(A_k)
-print(f"U: {U.shape}\n")
-print(f"S: {S.shape}\n")
-print(f"VT: {VT.shape}\n")
-plt.plot(np.diag(S))
+print(f"U_{k}: {U_k.shape}\n")
+print(f"S_{k}: {S_k.shape}\n")
+print(f"VT_{k}: {VT_k.shape}\n")
+plt.plot(np.diag(S_k))
 plt.xlabel("Singular value index")
 plt.ylabel("Singular value")
 plt.title("Singular values of A_k")
