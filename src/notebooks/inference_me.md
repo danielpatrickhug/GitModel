@@ -102,7 +102,7 @@ plt.show()
 ```
 
 ```python
-U, S, VT = np.linalg.svd(A_k)
+U_k, S_k, VT_k = np.linalg.svd(A_k)
 print(f"U: {U.shape}\n")
 print(f"S: {S.shape}\n")
 print(f"VT: {VT.shape}\n")
