@@ -88,7 +88,7 @@ Graph Laplacian
 L, D = graph_laplacian(A)
 L_k, D_k = graph_laplacian(A_k)
 ```
-SVD
+SVD for when the heads
 
 ```python
 U, S, VT = np.linalg.svd(A)
