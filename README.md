@@ -3,7 +3,7 @@
 GitModel is for dynamically generating high quality heirarchical topic tree
 representations of github repos using customizable GNN message passing layers.
 
-- Highly customizable philospophy. Goal to support huggingface, openai, cohere,
+- Highly customizable philospophy. Goal to support OpenAssistant, LAION OIG, Huggingface, Openai, Cohere,
   etc. python, js, c, c++, C#, etc
 - Swap system prompt tasks(bug hunting, todo, documentation labeling, etc) for enriching semantic graph
 - BERTopic is highly customizable and can compose several different clustering,
