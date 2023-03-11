@@ -52,7 +52,7 @@ if __name__ == "__main__":
         with open(f"context/{args.repo_name}_tree_{i}.txt", "w", encoding="utf-8") as f:
             f.write(topic_model_output["tree"])
 ```
-*I want to dedicate this to two years of unemployment in this crapshoot industry. 
+
 ## Bootstrap Ability
 The ability to bootstrap its own codebase is a powerful feature as it allows for efficient self-improvement and expansion. It means that the codebase is designed in such a way that it can use its own output as an input to improve itself.
 In the context of GitModel, this feature allows for the efficient improvement and expansion of its own codebase. By using its own output to generate hierarchical topic trees of GitHub repositories, it can analyze and extract insights from its own codebase and other codebases to improve its functionality. This can lead to more efficient and effective code generation, better semantic graph generation, and improved text generation capabilities.
