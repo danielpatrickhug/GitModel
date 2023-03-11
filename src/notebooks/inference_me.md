@@ -26,7 +26,9 @@ openai.api_key = openai_secret
 
 !git clone https://github.com/danielpatrickhug/GitModel.git
 ```
+
 TODO. standardize this
+
 ```python
 git_repo_path = "/content/GitModel"
 out_path = "/content/gitmodel_sum"
@@ -43,9 +45,10 @@ for cont in contents:
     else:
         print(cont["file_name"])
         pruned_contents.append(cont)
-        
+
 decompose_repo()
 ```
+
 ```python
 def load_jsonl(filepaths):
     data = []
@@ -61,7 +64,7 @@ repo = "gitmodel"
 repo_files = [
     f"{root_dir}/{repo}_summary.jsonl",
     f"{root_dir}/{repo}_question_asking.jsonl",
-]  
+]
 
 res = load_jsonl(repo_files)
 sents = []
@@ -76,6 +79,7 @@ for r in res:
 data = pd.DataFrame(sents, columns=["query"])
 data["_id"] = data.index
 ```
+
 ```python
 MODEL_NAME = "all-MiniLM-L6-v2"  # "allenai-specter"#
 embs = embed_data(data, model_name=MODEL_NAME)
@@ -83,11 +87,14 @@ A = compute_kernel_by_type(embs, threshold=0.6, kernel_type="cosine")
 k=2
 A_k, agg_features = k_hop_message_passing_sparse(A, embs, k)
 ```
+
 Graph Laplacian
+
 ```python
 L, D = graph_laplacian(A)
 L_k, D_k = graph_laplacian(A_k)
 ```
+
 SVD for when the heads
 
 ```python
@@ -121,8 +128,3 @@ freq = get_topic_info(topic_model)
 rep_docs = topic_model
 hr, tree = compute_hierarchical_topic_tree(topic_model=topic_model, data=data)
 ```
-
-
-
-
-
