@@ -66,6 +66,7 @@ repos:
     rev: 6.0.0
     hooks:
       - id: flake8
+        exclude: "^src/(ml_models/topic_modeling/topic_model|__init__)\\.py$"
 
   - repo: https://github.com/pycqa/isort
     rev: 5.12.0

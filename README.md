@@ -3,9 +3,10 @@
 GitModel is for dynamically generating high quality heirarchical topic tree
 representations of github repos using customizable GNN message passing layers.
 
-- Highly customizable philospophy. Goal to support OpenAssistant, LAION OIG, Huggingface, Openai, Cohere,
-  etc. python, js, c, c++, C#, etc
-- Swap system prompt tasks(bug hunting, todo, documentation labeling, etc) for enriching semantic graph
+- Highly customizable philospophy. Goal to support OpenAssistant, LAION OIG,
+  Huggingface, Openai, Cohere, etc. python, js, c, c++, C#, etc
+- Swap system prompt tasks(bug hunting, todo, documentation labeling, etc) for
+  enriching semantic graph
 - GNN Message Passing and Topic modeling pipeline as an inductive bias (GRNN)
 - SVD for componenent analysis
 - BERTopic is highly customizable and can compose several different clustering,
@@ -13,19 +14,20 @@ representations of github repos using customizable GNN message passing layers.
 - Change optics by swapping categorical objects in the pipeline swap
   umap_hdbscan with svd_kmeans or transform adj_matrix to graph laplacian
 
-
 "Memory" Tree representations can be dynamically selected and added to the
 system prompt augmenting text generation.
 
-Contributions Welcome!
-This is a great guide for how to make a pull request
+Contributions Welcome! This is a great guide for how to make a pull request
+
 - https://github.com/huggingface/diffusers/blob/main/CONTRIBUTING.md
+
 ## Examples
 
 ### Gitmodel
 
 - https://github.com/danielpatrickhug/GitModel
-- uses Deepminds clrs topic tree in system prompt during semantic graph generation
+- uses Deepminds clrs topic tree in system prompt during semantic graph
+  generation
 
 ```
 .
@@ -44,8 +46,6 @@ This is a great guide for how to make a pull request
           │    └─■──Computing k-hop adjacency matrix and aggregated features using message passing for a graph____ ── Topic: 3
           └─■──Probability density estimation of distance scores using Gaussian kernel density estimation____ ── Topic: 7
 ```
-
-
 
 ### DeepMind CLRS
 

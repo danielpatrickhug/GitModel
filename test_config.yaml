@@ -1,0 +1,41 @@
+semantic_graph_context_generator:
+  - __impl__: SemanticGraphContextGenerator
+    generator_id: summary
+    model_id: gpt-3.5-turbo
+    temperature: 0
+    max_tokens: 400
+    with_tree: False
+  - __impl__: SemanticGraphContextGenerator
+    generator_id: qa_chain
+    model_id: gpt-3.5-turbo
+    temperature: 0.3
+    max_tokens: 400
+    with_tree: False
+
+gnn_heads:
+  - __impl__: GNNHead
+    generator_id: message_passing
+    k_hop: 2
+    is_sparse: True
+    embbedding_id: sbert
+    embbedding_model: all-MiniLM-L6-v2
+    kernel_id: cosine_similarity
+    graph_id: adjacency
+    connection_threshold: 0.7
+
+topic_model:
+  - __impl__: TopicModel
+    topic_model_id: topic_model
+    embedding_model: all-MiniLM-L6-v2
+    clustering_model:
+      HDBSCAN(min_cluster_size=15, metric='euclidean',
+      cluster_selection_method='eom', prediction_data=True)
+    dimensionality_reduction:
+      umap_model = UMAP(n_neighbors=15, n_components=5, min_dist=0.0,
+      metric='cosine')
+    vectorizer_model: CountVectorizer(stop_words="english")
+    representation_model:
+      OpenAI(model="gpt-3.5-turbo", delay_in_seconds=1, chat=True)
+    hierarchical_linkage_fn: sch.linkage(x, 'single', optimal_ordering=True)
+    with_tree: True
+    auto_cluster: True
