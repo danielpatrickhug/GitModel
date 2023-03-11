@@ -28,9 +28,12 @@ class SemanticGraphContextGenerator:
                 pruned_contents.append(cont)
         return pruned_contents
 
-    def chat_gpt_inference(self, messages: list, max_tokens=400, temperature=0.4):
+    def chat_gpt_inference(self, messages: list):
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo", messages=messages, max_tokens=max_tokens, temperature=temperature
+            model="gpt-3.5-turbo",
+            messages=messages,
+            max_tokens=self.config["max_tokens"],
+            temperature=self.config["temperature"],
         )
         return response
 
