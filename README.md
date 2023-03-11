@@ -3,9 +3,10 @@
 GitModel is for dynamically generating high quality heirarchical topic tree
 representations of github repos using customizable GNN message passing layers.
 
-- Highly customizable philospophy. Goal to support OpenAssistant, LAION OIG, Huggingface, Openai, Cohere,
-  etc. python, js, c, c++, C#, etc
-- Swap system prompt tasks(bug hunting, todo, documentation labeling, etc) for enriching semantic graph
+- Highly customizable philospophy. Goal to support OpenAssistant, LAION OIG,
+  Huggingface, Openai, Cohere, etc. python, js, c, c++, C#, etc
+- Swap system prompt tasks(bug hunting, todo, documentation labeling, etc) for
+  enriching semantic graph
 - GNN Message Passing and Topic modeling pipeline as an inductive bias (GRNN)
 - SVD for componenent analysis
 - BERTopic is highly customizable and can compose several different clustering,
@@ -13,24 +14,21 @@ representations of github repos using customizable GNN message passing layers.
 - Change optics by swapping categorical objects in the pipeline swap
   umap_hdbscan with svd_kmeans or transform adj_matrix to graph laplacian
 
-
 "Memory" Tree representations can be dynamically selected and added to the
 system prompt augmenting text generation.
 
-Contributions Welcome!
-This is a great guide for how to make a pull request
+Contributions Welcome! This is a great guide for how to make a pull request
+
 - https://github.com/huggingface/diffusers/blob/main/CONTRIBUTING.md
 
-## Bootstrap Ability
-The ability to bootstrap its own codebase is a powerful feature as it allows for efficient self-improvement and expansion. It means that the codebase is designed in such a way that it can use its own output as an input to improve itself.
-In the context of GitModel, this feature allows for the efficient improvement and expansion of its own codebase. By using its own output to generate hierarchical topic trees of GitHub repositories, it can analyze and extract insights from its own codebase and other codebases to improve its functionality. This can lead to more efficient and effective code generation, better semantic graph generation, and improved text generation capabilities.
 
 ## Examples
 
 ### Gitmodel
 
 - https://github.com/danielpatrickhug/GitModel
-- uses Deepminds clrs topic tree in system prompt during semantic graph generation
+- uses Deepminds clrs topic tree in system prompt during semantic graph
+  generation
 
 ```
 .
@@ -49,8 +47,6 @@ In the context of GitModel, this feature allows for the efficient improvement an
           │    └─■──Computing k-hop adjacency matrix and aggregated features using message passing for a graph____ ── Topic: 3
           └─■──Probability density estimation of distance scores using Gaussian kernel density estimation____ ── Topic: 7
 ```
-
-
 
 ### DeepMind CLRS
 

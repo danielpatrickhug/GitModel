@@ -1,3 +1,4 @@
+astor
 bertopic
 numpy
 openai

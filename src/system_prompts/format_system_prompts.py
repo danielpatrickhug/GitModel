@@ -6,7 +6,7 @@ def format_system_prompts(git_repo_path, file_name):
                     the main functionality and purpose of the codebase. Additionally, ChatGPT can provide insights into the programming languages and libraries used in the repository,
                     as well as any notable features or functionalities that are present. Simply provide the necessary information, and let ChatGPT do the rest!
                     """,
-        "question_asking": f"""
+        "qa_chain": f"""
                     Ask ChatGPT questions about the codebase of the GitHub repository: {git_repo_path} you're currently in the file {file_name}.
                     ChatGPT asks questions that a new developer may ask about the codebase used in the repository,
                     as well as answer the question with step by step reasoning as a senoir dev would. All responses should first ask a question and then answer with reasoning.

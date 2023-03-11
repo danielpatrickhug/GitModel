@@ -6,7 +6,8 @@ venv
 *.egg-info
 __pycache__
 .DS_Store
-
+work
+context
 
 # ignore jupyter notebook checkpoints
 .ipynb_checkpoints
