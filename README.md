@@ -77,20 +77,57 @@ and improved text generation capabilities.
 
 ```
 .
-├─■──Parsing Python code using abstract syntax trees (AST) and extracting methods____ ── Topic: 5
-└─Repository graph generation and topic modeling using embeddings, adjacency maps, and hierarchical topic trees
-     ├─Functions for formatting system prompts and decomposing repositories in ChatGPT-based conversational
-     │    ├─■──Understanding database migrations in offline and online mode using SQLAlchemy and Alembic____ ── Topic: 4
-     │    └─Functions and System Prompts for Code Repositories and ChatGPT____
-     │         ├─Documenting GitHub Repositories with ChatGPT____
-     │         │    ├─■──Parsing and Decomposing Contents of a Git Repository in Python____ ── Topic: 1
-     │         │    └─■──Codebase Summary and Conversation Template Generation with System Prompts for ChatGPT____ ── Topic: 2
-     │         └─■──Using OpenAI GPT-3.5-Turbo model for chat response generation in Python____ ── Topic: 6
-     └─Document pruning and Gaussian kernel computation using PyTorch in a topic model.____
-          ├─Document pruning and adjacency matrix computation in GitModel____
-          │    ├─■──Document pruning and Gaussian kernel computation for topic modeling using PyTorch embeddings____ ── Topic: 0
-          │    └─■──Computing k-hop adjacency matrix and aggregated features using message passing for a graph____ ── Topic: 3
-          └─■──Probability density estimation of distance scores using Gaussian kernel density estimation____ ── Topic: 7
+├─Function description and comparison including Gaussian kernel and sparse matrices____
+│    ├─■──Understanding the Purpose and Handling of a Function for Sparse Matrices with Inputs, Outputs, and P ── Topic: 9
+│    └─Understanding kernels and functions in the 'kernels.py' file for estimating PDF and computing simila
+│         ├─■──Purpose and functions of kernel-related functions in kernels.py file of a Python program, including  ── Topic: 22
+│         └─■──Understanding the cos_sim and cos_sim_torch functions in kernels.py file____ ── Topic: 25
+└─Graph message passing and adjacency matrix computation using embeddings____
+     ├─k-hop message passing and cosine similarity kernel computation for graph embeddings____
+     │    ├─k-hop message passing with adjacency matrix and node features____
+     │    │    ├─Computation of Gaussian Kernel Matrix between Two Sets of Embeddings using PyTorch____
+     │    │    │    ├─■──Cosine Similarity with PyTorch Tensors and Functional.____ ── Topic: 1
+     │    │    │    └─■──Function to compute adjacency matrix for embeddings using specified kernel type and threshold value_ ── Topic: 19
+     │    │    └─Message Passing and K-hop Aggregation in Graphs using Sparse Matrices and Node Features____
+     │    │         ├─■──Document pruning and adjacency matrix recomputation using embeddings and thresholding____ ── Topic: 11
+     │    │         └─k-hop message passing and adjacency matrix computation in sparse graphs.____
+     │    │              ├─■──Computing graph laplacian and degree matrix from pairwise distances using a given function.____ ── Topic: 7
+     │    │              └─■──Message Passing with K-hop Adjacency and Aggregated Features in Sparse Matrices____ ── Topic: 8
+     │    └─"Outlier Reduction Using Count-TF-IDF and OpenAI Representation Model"____
+     │         ├─Topic Modeling and Outlier Reduction in Natural Language Processing (NLP)____
+     │         │    ├─Understanding the compose_inference function in a chatbot system.____
+     │         │    │    ├─■──Processing conversation transcripts with Python functions____ ── Topic: 18
+     │         │    │    └─Understanding the compose_inference function in a chatbot conversation with message templates____
+     │         │    │         ├─■──Understanding the `compose_inference` Function in Chatbot Conversation Generation with OpenAI GPT___ ── Topic: 2
+     │         │    │         └─■──Function to create prompt message template with role and text input parameters and validation of rol ── Topic: 17
+     │         │    └─Outlier Reduction with Machine Learning Models____
+     │         │         ├─Document processing and reduction techniques for topic modeling with various machine learning models
+     │         │         │    ├─MiniLM language model for sentence embedding____
+     │         │         │    │    ├─■──Embedding sentences using MiniLM language model with multiprocessing and GPU acceleration____ ── Topic: 15
+     │         │         │    │    └─■──Embedding Sentences using Pre-Trained Language Model with SentenceTransformer Library____ ── Topic: 23
+     │         │         │    └─■──Topic modeling algorithms and document reduction techniques____ ── Topic: 0
+     │         │         └─SQLalchemy migrations in online mode with engine configuration____
+     │         │              ├─■──Probability Density Estimation with Gaussian Kernel Density Estimator____ ── Topic: 12
+     │         │              └─Running database migrations with SQLAlchemy and Alembic____
+     │         │                   ├─■──Graph network message passing & Mobile App Navigation System Design____ ── Topic: 21
+     │         │                   └─■──Running migrations with SQLAlchemy and Alembic in online mode____ ── Topic: 6
+     │         └─Class Settings definition using BaseSettings and its purpose for managing configuration in a third-p
+     │              ├─■──Empty class definition for managing application settings using Pydantic's BaseSettings____ ── Topic: 3
+     │              └─■──MemoryTreeManager class implementation____ ── Topic: 16
+     └─Codebase decomposition and analysis with Git repository and AST nodes.____
+          ├─Code decomposition and processing in Git repositories.____
+          │    ├─■──Python code parsing and analysis____ ── Topic: 4
+          │    └─Code decomposition in a Git repository____
+          │         ├─■──Decomposing Git Repositories with System Prompts.____ ── Topic: 10
+          │         └─Parsing and pruning files in a GitHub repository____
+          │              ├─■──parsing and pruning files in a local Git repository____ ── Topic: 5
+          │              └─■──purpose of `get_repo_contents` function in `repo_graph_generation.py` for retrieving and pruning Git ── Topic: 24
+          └─Analyzing chatbot main capabilities in a codebase using natural language processing and notable fram
+               ├─■──summarizing code in a GitHub repository using ChatGPT____ ── Topic: 14
+               └─Understanding Codebase Structure and Functionality with Hierarchical Trees and Frameworks____
+                    ├─■──Analyzing codebase structure and functionalities using a hierarchical topic tree____ ── Topic: 13
+                    └─■──Understanding the difference between format_system_prompts and format_system_prompts_with_tree in a  ── Topic: 20
+
 ```
 
 ### DeepMind CLRS
