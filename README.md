@@ -21,6 +21,38 @@ Contributions Welcome! This is a great guide for how to make a pull request
 
 - https://github.com/huggingface/diffusers/blob/main/CONTRIBUTING.md
 
+## How to Use
+__main.py__
+```python
+import argparse
+from getpass import getpass
+
+import openai
+
+from src import Pipeline
+
+if __name__ == "__main__":
+    argsparse = argparse.ArgumentParser()
+    argsparse.add_argument("--config", type=str, default="./test_config.yaml")
+    argsparse.add_argument("--repo", type=str, default="https://github.com/danielpatrickhug/GitModel.git")
+    argsparse.add_argument("--repo_name", type=str, default="gitmodel")
+
+    args = argsparse.parse_args()
+
+    openai_secret = getpass("Enter the secret key: ")
+    # Set up OpenAI API credentials
+    openai.api_key = openai_secret
+
+    print("starting pipeline")
+    pipeline = Pipeline.from_yaml(args.config)
+    gnn_head_outputs, topic_model_outputs = pipeline.run(args.repo, args.repo_name)
+    for i, topic_model_output in enumerate(topic_model_outputs):
+        topic_model_output["data"].to_csv(f"context/{args.repo_name}_topic_model_outputs_{i}.csv")
+        topic_model_output["topic_info"].to_csv(f"context/{args.repo_name}_topic_info_{i}.csv")
+        with open(f"context/{args.repo_name}_tree_{i}.txt", "w", encoding="utf-8") as f:
+            f.write(topic_model_output["tree"])
+```
+
 ## Bootstrap Ability
 The ability to bootstrap its own codebase is a powerful feature as it allows for efficient self-improvement and expansion. It means that the codebase is designed in such a way that it can use its own output as an input to improve itself.
 In the context of GitModel, this feature allows for the efficient improvement and expansion of its own codebase. By using its own output to generate hierarchical topic trees of GitHub repositories, it can analyze and extract insights from its own codebase and other codebases to improve its functionality. This can lead to more efficient and effective code generation, better semantic graph generation, and improved text generation capabilities.
