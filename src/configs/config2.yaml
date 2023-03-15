@@ -1,7 +1,7 @@
 pipeline_settings:
   - __impl__: PipelineSettings
-    combine_gnn_strategy: none
-    norm_fn: none
+    combine_gnn_strategy: sum
+    norm_fn: z_score
     skip_graph_creation: True
 
 semantic_graph_context_generator:
@@ -27,6 +27,25 @@ gnn_heads:
     embbedding_model: all-MiniLM-L6-v2
     kernel_id: cosine_similarity
     graph_id: adjacency
+    connection_threshold: 0.7
+  - __impl__: GNNHead
+    generator_id: message_passing
+    k_hop: 3
+    is_sparse: True
+    embbedding_id: sbert
+    embbedding_model: all-MiniLM-L6-v2
+    kernel_id: cosine_similarity
+    graph_id: adjacency
+    connection_threshold: 0.7
+  - __impl__: GNNHead
+    generator_id: message_passing
+    k_hop: 2
+    is_sparse: True
+    embbedding_id: sbert
+    embbedding_model: all-MiniLM-L6-v2
+    kernel_id: gaussian
+    sigma: 1
+    graph_id: laplacian
     connection_threshold: 0.7
 
 topic_model:

@@ -78,8 +78,7 @@ class SemanticGraphContextGenerator:
 
         return messages
 
-    def decompose_repo(self, git_repo_path, name_id, out_path, topic_tree=None):
-        # This could be done better
+    def decompose_repo(self, git_repo_path, name_id, out_path, skip_graph_generation=False):
         contents = self.get_repo_contents(git_repo_path)
         context_paths = []
         for cont in contents:
@@ -97,6 +96,8 @@ class SemanticGraphContextGenerator:
                 num_classes = len(cont["classes"])
                 print(f"Imports: {cont['imports']}")
                 context_paths.append(f"{out_path}/{out_file_name}.jsonl")
+                if skip_graph_generation:
+                    continue
                 try:
                     if num_funcs > 0 or num_classes > 0:
                         print(f" len of functions: {len(cont['functions'])}")

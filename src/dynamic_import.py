@@ -1,7 +1,7 @@
 from copy import deepcopy
 from typing import Dict
 
-from src.config import Config
+from src.config import Config, PipelineSettings
 from src.ml_models.graph_networks.gnn_head import GNNHead
 from src.ml_models.topic_modeling.topic_model import TopicModel
 from src.ml_models.transformers.semantic_graph_context_generator import SemanticGraphContextGenerator
@@ -11,7 +11,7 @@ def instantiate_class_from_config(config: Config) -> Dict[str, list]:
     config = deepcopy(config)
 
     obj_map = {}
-    for component_name in ["semantic_graph_context_generator", "gnn_heads", "topic_model"]:
+    for component_name in ["pipeline_settings", "semantic_graph_context_generator", "gnn_heads", "topic_model"]:
         if component_name not in obj_map:
             obj_map[component_name] = []
 
@@ -19,6 +19,7 @@ def instantiate_class_from_config(config: Config) -> Dict[str, list]:
             impl = args.pop("__impl__")
             try:
                 _cls = {
+                    "PipelineSettings": PipelineSettings,
                     "SemanticGraphContextGenerator": SemanticGraphContextGenerator,
                     "GNNHead": GNNHead,
                     "TopicModel": TopicModel,

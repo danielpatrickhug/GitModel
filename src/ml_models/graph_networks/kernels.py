@@ -131,6 +131,17 @@ def compute_kernel_by_type(embs, threshold=0.65, kernel_type="cosine", sigma=1.0
     return adj_matrix
 
 
+def compute_kernel_with_activation_fn(embs, activation_fn=F.relu, kernel_type="cosine", sigma=1.0):
+    # match case to kernel type
+    if kernel_type == "gaussian":
+        A = gaussian_kernel_torch(embs, embs, sigma)
+    if kernel_type == "cosine":
+        A = cos_sim(embs, embs)
+    A = activation_fn(A)
+    A = A.numpy().astype(np.float32)
+    return A
+
+
 def compute_kernel(embs):
     # TODO match case to kernel type
     A = cos_sim(embs, embs)
