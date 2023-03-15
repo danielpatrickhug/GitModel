@@ -9,7 +9,7 @@ if __name__ == "__main__":
     argsparse = argparse.ArgumentParser()
     argsparse.add_argument("--config", type=str, default="./test_config.yaml")
     argsparse.add_argument("--repo", type=str, default="https://github.com/danielpatrickhug/GitModel.git")
-    argsparse.add_argument("--repo_name", type=str, default="gitmodel")
+    argsparse.add_argument("--repo_name", type=str, default="gitmodel1")
 
     args = argsparse.parse_args()
 
