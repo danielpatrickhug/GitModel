@@ -2,20 +2,20 @@ pipeline_settings:
   - __impl__: PipelineSettings
     combine_gnn_strategy: none
     norm_fn: none
-    skip_graph_creation: True
+    skip_graph_creation: False
 
 semantic_graph_context_generator:
   - __impl__: SemanticGraphContextGenerator
     generator_id: summary
     model_id: gpt-3.5-turbo
     temperature: 0
-    max_tokens: 300
+    max_tokens: 500
     with_tree: False
   - __impl__: SemanticGraphContextGenerator
     generator_id: qa_chain
     model_id: gpt-3.5-turbo
     temperature: 0
-    max_tokens: 300
+    max_tokens: 500
     with_tree: False
 
 gnn_heads:
@@ -41,7 +41,7 @@ topic_model:
       metric='cosine')
     vectorizer_model: CountVectorizer(stop_words="english")
     representation_model:
-      OpenAI(model="gpt-3.5-turbo", delay_in_seconds=1, chat=True)
-    hierarchical_linkage_fn: sch.linkage(x, 'centroid', optimal_ordering=True)
+      pipeline('text2text-generation', model='tloen/alpaca-lora-7b')
+    hierarchical_linkage_fn: sch.linkage(x, 'single', optimal_ordering=True)
     with_tree: True
     auto_cluster: True

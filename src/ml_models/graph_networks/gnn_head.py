@@ -7,6 +7,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from sentence_transformers import SentenceTransformer
+from transformers import AutoModel
 
 from src.config import Config
 from src.ml_models.graph_networks.kernels import compute_kernel_by_type, graph_laplacian
@@ -50,7 +51,12 @@ class GNNHead:
         Embed the sentences/text using the MiniLM language model (which uses mean pooling)
         """
         print("Embedding data")
-        model = SentenceTransformer(self.config["embbedding_model"])
+        if self.config["embbedding_model"] == "all-MiniLM-L6-v2":
+            model = SentenceTransformer(self.config["embbedding_model"])
+        elif self.config["embbedding_model"] == "graphcodebert-base":
+            model = AutoModel.from_pretrained("sentence-transformers/bert-base-nli-mean-tokens")
+        else:
+            raise ValueError("Invalid embedding model specified.")
         print("Model loaded")
 
         sentences = data[key].tolist()
@@ -111,6 +117,22 @@ class GNNHead:
             A_k, agg_features = k_hop_message_passing(A, embs, self.config["k_hop"])
 
         return A_k, agg_features
+
+
+class GraphCodeBERT:
+    def __init__(self, config: Config):
+        self.config = config
+
+    def __repr__(self) -> str:
+        return f"GraphCodeBERT(config={self.config})"
+
+    def mean_pooling(self, model_output, attention_mask):
+        token_embeddings = model_output[0]  # First element of model_output contains all token embeddings
+        input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
+        return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
+
+    def encode(self):
+        pass
 
 
 class GATLayer(nn.Module):
