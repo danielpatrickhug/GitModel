@@ -55,6 +55,11 @@ if __name__ == "__main__":
             f.write(topic_model_output["tree"])
 ```
 
+## Topic model your dependencies.
+If you have enough patience or a lot of money to afford more then one computer.
+run GitModel on /venv/lib/python3.10/site-packages
+
+
 ## Bootstrap Ability
 
 The ability to bootstrap its own codebase is a powerful feature as it allows for
