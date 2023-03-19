@@ -1,17 +1,25 @@
+import logging
 import os
+import sys
 from typing import Tuple
 
 import numpy as np
 import pandas as pd
 from bertopic import BERTopic
-from bertopic.representation import MaximalMarginalRelevance, OpenAI
+from bertopic.representation import MaximalMarginalRelevance, OpenAI, TextGeneration
 from bertopic.vectorizers import ClassTfidfTransformer
 from sentence_transformers import SentenceTransformer
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import CountVectorizer
+from transformers import pipeline
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
+lg = logging.getLogger(__name__)
+lg.setLevel(logging.DEBUG)
+handler = logging.StreamHandler(sys.stdout)
+handler.setFormatter(logging.Formatter("[%(asctime)s] [%(levelname)s] - %(message)s"))
+lg.addHandler(handler)
 
 
 class TopicModel:
@@ -66,11 +74,20 @@ class TopicModel:
         """
         # Prepare the data
         if self.config["auto_cluster"]:
+            if self.config["representation_model"].split("(")[0] == "pipeline":
+                generator = self.config["representation_model"]
+                representation_model = TextGeneration(eval(generator))
+            elif self.config["representation_model"].split("(")[0] == "OpenAI":
+                representation_model = eval(self.config["representation_model"])
+            else:
+                lg.info("Using MaximalMarginalRelevance as representation model")
+                representation_model = MaximalMarginalRelevance(diversity=0.3)
+
             topic_model = BERTopic(
                 nr_topics="auto",
                 vectorizer_model=eval(self.config["vectorizer_model"]),
                 embedding_model=self.config["embedding_model"],
-                representation_model=eval(self.config["representation_model"]),
+                representation_model=representation_model,
                 n_gram_range=(1, 2),
                 min_topic_size=10,
                 top_n_words=10,

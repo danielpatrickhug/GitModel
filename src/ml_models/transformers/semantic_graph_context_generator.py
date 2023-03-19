@@ -4,7 +4,11 @@ import openai
 
 from src.ast_parsers.python_ast_parser import get_methods, parse_github_repo
 from src.config import Config
-from src.system_prompts.format_system_prompts import format_system_prompts, format_system_prompts_with_tree
+from src.system_prompts.format_system_prompts import (
+    extract_questions,
+    format_system_prompts,
+    format_system_prompts_with_tree,
+)
 
 
 class SemanticGraphContextGenerator:
@@ -56,6 +60,7 @@ class SemanticGraphContextGenerator:
 
         with open(output_file_path, "a") as f:
             for i, sent in enumerate(segments):
+
                 text_block = f"""```{sent}```"""
                 try:
                     messages, reply_text = self.compose_inference(text_block[:2000], messages)
@@ -64,17 +69,37 @@ class SemanticGraphContextGenerator:
                     messages, reply_text = self.compose_inference(
                         text_block[:2000], [{"role": "system", "content": system_prompt}]
                     )
-                row = {
-                    "git_repo_path": git_repo_path,
-                    "file_name": file_name,
-                    "code_type": code_type,
-                    "system_task": task,
-                    "system_prompt": system_prompt,
-                    "conversation_history": messages,
-                    "assistant_reply": reply_text,
-                }
-                json.dump(row, f)
-                f.write("\n")
+                if task == "self-instruction":
+                    questions = extract_questions(reply_text)
+                    if len(questions) > 0:
+                        for q in questions:
+                            sub_text_block = f"""{q}```{sent}```"""
+                            print(sub_text_block)
+                            print()
+                            messages, reply_text = self.compose_inference(sub_text_block[:2000], messages)
+                            row = {
+                                "git_repo_path": git_repo_path,
+                                "file_name": file_name,
+                                "code_type": code_type,
+                                "system_task": task,
+                                "system_prompt": system_prompt,
+                                "conversation_history": messages,
+                                "assistant_reply": reply_text,
+                            }
+                            json.dump(row, f)
+                            f.write("\n")
+                else:
+                    row = {
+                        "git_repo_path": git_repo_path,
+                        "file_name": file_name,
+                        "code_type": code_type,
+                        "system_task": task,
+                        "system_prompt": system_prompt,
+                        "conversation_history": messages,
+                        "assistant_reply": reply_text,
+                    }
+                    json.dump(row, f)
+                    f.write("\n")
 
         return messages
 
@@ -82,6 +107,7 @@ class SemanticGraphContextGenerator:
         contents = self.get_repo_contents(git_repo_path)
         context_paths = []
         for cont in contents:
+
             if not self.config["with_tree"]:
                 system_prompts = format_system_prompts(git_repo_path, cont["file_name"])
             else:
@@ -89,6 +115,7 @@ class SemanticGraphContextGenerator:
                     git_repo_path, cont["file_name"], self.config["topic_tree"]
                 )
             for k, v in zip(system_prompts.keys(), system_prompts.values()):
+
                 func_task = k
                 out_file_name = f"{name_id}_{func_task}"
                 print(f"file_name: {cont['file_name']}")
