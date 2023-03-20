@@ -6,8 +6,8 @@ representations of github repos using customizable GNN message passing layers.
 - Documentation coming soon. You could always generate it yourself in the mean time :)
 - Swap system prompt tasks(bug hunting, todo, documentation labeling, etc) for
   enriching semantic graph and dataset building. 
-    - The generated data is saved to context folder 
-    - in src/format_system_prompts. w/ tree works but it requires manual changing one line of code.
+    - The generated data is saved to context folder. 
+    - in src/format_system_prompts. w/ tree works but it requires manual changing one line of code. will fix soon
 - GNN Message Passing and Topic modeling pipeline as an inductive bias (GRNN)
 - BERTopic is highly customizable and can compose several different clustering,
   embedding, vectorizers, bag of words and dimensionality reduction techniques.
