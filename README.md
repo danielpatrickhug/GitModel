@@ -14,6 +14,7 @@ representations of github repos using customizable GNN message passing layers.
 - Change optics by swapping categorical objects in the pipeline swap
   umap_hdbscan with svd_kmeans or transform adj_matrix to graph laplacian
 - If youre new to GNN's I recommend computing the SVD on your adj matricies and seeing how the components change before and after message passing.
+  - Mess around with the connection threshold param before adding a RELU
 
 
 Contributions Welcome! This is a great guide for how to make a pull request
