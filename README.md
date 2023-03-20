@@ -134,6 +134,60 @@ and improved text generation capabilities.
                     └─■──Understanding the difference between format_system_prompts and format_system_prompts_with_tree in a  ── Topic: 20
 
 ```
+w/ graph code bert embeddings
+```
+.
+├─"The Pipeline Class and Its Methods in GitModel Project"____
+│    ├─Probability Density Estimation using Gaussian KDE in SciPy____
+│    │    ├─Probability density function estimation using Gaussian kernel density estimation____
+│    │    │    ├─■──Probability density estimation with Gaussian kernel____ ── Topic: 16
+│    │    │    └─■──Understanding cos_sim_torch function and configuring context with URL and target metadata____ ── Topic: 14
+│    │    └─Empty class definition for MessageTreeManagerConfiguration in Python____
+│    │         ├─Empty class definition in MessageTreeManagerConfiguration with BaseModel inheritance.____
+│    │         │    ├─■──Questions about bug fixing with system prompts in kernel computation with tensors and matrices.____ ── Topic: 13
+│    │         │    └─Empty class definitions and inability to determine expected behavior of MemoryTreeManager class____
+│    │         │         ├─■──Purpose of run_migrations_online in Alembic environment file____ ── Topic: 12
+│    │         │         └─■──Empty class definition of MessageTreeManagerConfiguration inheriting from BaseModel____ ── Topic: 25
+│    │         └─Understanding the purpose of SemanticGraphContextGenerator and TopicModel classes in the codebase___
+│    │              ├─■──Purpose of Pipeline class in codebase with SemanticGraphContextGenerator, MessageTreeManagerConfigur ── Topic: 15
+│    │              └─■──Understanding the purpose and usage of TopicModel class in dimensional tensors and input shape setti ── Topic: 20
+│    └─GitModel Pipeline class with find_files_with_substring method____
+│         ├─GitModel Pipeline Class and find_files_with_substring Method Description____
+│         │    ├─■──Understanding the `clone_and_create_context_folder` Function____ ── Topic: 4
+│         │    └─GitModel Pipeline class and methods for searching files with substring____
+│         │         ├─GitModel Pipeline class and methods for file searching____
+│         │         │    ├─■──Python class for loading and initializing configuration values from a YAML file with dynamic imports ── Topic: 9
+│         │         │    └─■──The Pipeline class and its methods in GitModel project configuration and file searching.____ ── Topic: 10
+│         │         └─■──Python Pipeline Class for Generating a Semantic Graph Context for Git Repository Data Processing____ ── Topic: 8
+│         └─■──Cloning and Storing Repository in "Work" Folder with Custom Name using Python Function____ ── Topic: 22
+└─Understanding the purpose and input of a Pipeline class in a project involving semantic graphs and e
+     ├─Topic Modeling with Hierarchical Topics and Outlier Reduction Strategies in Python____
+     │    ├─Working with context folders and creating directories using os module.____
+     │    │    ├─■──Creating a work folder and cloning a repository to create a context folder in Python____ ── Topic: 18
+     │    │    └─■──Working with context and folder paths in Python____ ── Topic: 3
+     │    └─■──Topic modeling and representation using hierarchical and ctfidf models____ ── Topic: 5
+     └─PyTorch function for computing Gaussian kernel matrix and k-hop message passing on an adjacency matr
+          ├─Compute k-hop adjacency matrix and aggregated features using message passing in graph analysis.____
+          │    ├─k-hop message passing with adjacency matrix and node features____
+          │    │    ├─■──Document Pruning and Adjacency Matrix Recomputation____ ── Topic: 23
+          │    │    └─Computing k-hop adjacency matrix with message passing in graph neural networks.____
+          │    │         ├─■──Computing k-hop adjacency matrix and aggregated features using message passing____ ── Topic: 0
+          │    │         └─■──GNNHead class for computing kernel matrix with node features in numpy array____ ── Topic: 1
+          │    └─Data Migrations in Offline Mode.____
+          │         ├─■──Degree matrix computation using adjacency distance matrix and pairwise distances in Python____ ── Topic: 21
+          │         └─■──SQLAlchemy migration in 'offline' mode____ ── Topic: 11
+          └─Understanding code inputs and purpose in a Pipeline class____
+               ├─Parsing Python files using AST module and extracting specific information____
+               │    ├─■──Cosine Similarity Computation using PyTorch and NumPy____ ── Topic: 6
+               │    └─■──Python code parsing and data extraction using AST____ ── Topic: 17
+               └─Code Structure and Purpose of Pipeline Class with Config and Semantic Graph Context Generator in Pyt
+                    ├─Code for a Pipeline with Semantic Graph Context Generator____
+                    │    ├─■──Understanding Pipeline Class and Semantic Graph Context Generation in Python Code____ ── Topic: 24
+                    │    └─■──Summarizing code in a GitHub repository using ChatGPT____ ── Topic: 2
+                    └─Semantic Graph Context Generator Class and Methods____
+                         ├─■──Semantic Graph Context Generation for Git Repositories.____ ── Topic: 19
+                         └─■──Implementation of class instantiation using configuration and dictionary mapping.____ ── Topic: 7
+```
 
 ### DeepMind CLRS
 
