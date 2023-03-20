@@ -3,19 +3,17 @@
 GitModel is for dynamically generating high quality heirarchical topic tree
 representations of github repos using customizable GNN message passing layers.
 
-- Highly customizable philospophy. Goal to support OpenAssistant, LAION OIG,
-  Huggingface, Openai, Cohere, etc. python, js, c, c++, C#, etc
+- 
 - Swap system prompt tasks(bug hunting, todo, documentation labeling, etc) for
-  enriching semantic graph
+  enriching semantic graph and dataset building. 
+    - The generated data is saved to context folder 
+    - in src/format_system_prompts. w/ tree works but it requires manual changing one line of code.
 - GNN Message Passing and Topic modeling pipeline as an inductive bias (GRNN)
-- SVD for componenent analysis
 - BERTopic is highly customizable and can compose several different clustering,
   embedding, vectorizers, bag of words and dimensionality reduction techniques.
 - Change optics by swapping categorical objects in the pipeline swap
   umap_hdbscan with svd_kmeans or transform adj_matrix to graph laplacian
 
-"Memory" Tree representations can be dynamically selected and added to the
-system prompt augmenting text generation.
 
 Contributions Welcome! This is a great guide for how to make a pull request
 
