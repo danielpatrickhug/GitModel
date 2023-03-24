@@ -1,6 +1,6 @@
 # GitModel
 
-GitModel can generate high quality topic models of github repos using GPT and GNN message passing layers.
+GitModel can generate high quality topic models of github repos using GPT, GNN message passing layers and BERTopic.
 
 - Generate documentation for Python repos and create enriched subgraphs for your codebases
 - Swap system prompt tasks(bug hunting, todo, documentation labeling, etc) for
