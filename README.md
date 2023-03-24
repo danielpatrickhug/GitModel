@@ -1,9 +1,8 @@
 # GitModel
 
-GitModel is for dynamically generating high quality heirarchical topic tree
-representations of github repos using customizable GNN message passing layers.
+GitModel can generate high quality topic models of github repos using GPT and GNN message passing layers.
 
-- Documentation coming soon. You could always generate it yourself in the mean time :)
+- Generate documentation for Python repos and create enriched subgraphs for your codebases
 - Swap system prompt tasks(bug hunting, todo, documentation labeling, etc) for
   enriching semantic graph and dataset building. 
     - The generated data is saved to context folder. 
