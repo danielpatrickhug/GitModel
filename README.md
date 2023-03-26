@@ -1,21 +1,20 @@
 # GitModel
 
-GitModel is for dynamically generating high quality heirarchical topic tree
-representations of github repos using customizable GNN message passing layers.
+GitModel can generate high quality topic models of github repos using GPT, GNN message passing layers and BERTopic.
 
-- Highly customizable philospophy. Goal to support OpenAssistant, LAION OIG,
-  Huggingface, Openai, Cohere, etc. python, js, c, c++, C#, etc
+- Generate documentation for Python repos and create enriched subgraphs for your codebases
 - Swap system prompt tasks(bug hunting, todo, documentation labeling, etc) for
-  enriching semantic graph
+  enriching semantic graph and dataset building. 
+    - The generated data is saved to context folder. 
+    - in src/format_system_prompts. w/ tree works but it requires manual changing one line of code. will fix soon
 - GNN Message Passing and Topic modeling pipeline as an inductive bias (GRNN)
-- SVD for componenent analysis
 - BERTopic is highly customizable and can compose several different clustering,
   embedding, vectorizers, bag of words and dimensionality reduction techniques.
 - Change optics by swapping categorical objects in the pipeline swap
   umap_hdbscan with svd_kmeans or transform adj_matrix to graph laplacian
+- If youre new to GNN's I recommend computing the SVD on your adj matricies and seeing how the components change before and after message passing.
+  - Mess around with the connection threshold param before adding a RELU
 
-"Memory" Tree representations can be dynamically selected and added to the
-system prompt augmenting text generation.
 
 Contributions Welcome! This is a great guide for how to make a pull request
 
@@ -55,6 +54,11 @@ if __name__ == "__main__":
             f.write(topic_model_output["tree"])
 ```
 
+## Topic model your dependencies.
+If you have enough patience or a lot of money to afford more then one computer.
+run GitModel on /venv/lib/python3.10/site-packages
+
+
 ## Bootstrap Ability
 
 The ability to bootstrap its own codebase is a powerful feature as it allows for
@@ -77,20 +81,111 @@ and improved text generation capabilities.
 
 ```
 .
-├─■──Parsing Python code using abstract syntax trees (AST) and extracting methods____ ── Topic: 5
-└─Repository graph generation and topic modeling using embeddings, adjacency maps, and hierarchical topic trees
-     ├─Functions for formatting system prompts and decomposing repositories in ChatGPT-based conversational
-     │    ├─■──Understanding database migrations in offline and online mode using SQLAlchemy and Alembic____ ── Topic: 4
-     │    └─Functions and System Prompts for Code Repositories and ChatGPT____
-     │         ├─Documenting GitHub Repositories with ChatGPT____
-     │         │    ├─■──Parsing and Decomposing Contents of a Git Repository in Python____ ── Topic: 1
-     │         │    └─■──Codebase Summary and Conversation Template Generation with System Prompts for ChatGPT____ ── Topic: 2
-     │         └─■──Using OpenAI GPT-3.5-Turbo model for chat response generation in Python____ ── Topic: 6
-     └─Document pruning and Gaussian kernel computation using PyTorch in a topic model.____
-          ├─Document pruning and adjacency matrix computation in GitModel____
-          │    ├─■──Document pruning and Gaussian kernel computation for topic modeling using PyTorch embeddings____ ── Topic: 0
-          │    └─■──Computing k-hop adjacency matrix and aggregated features using message passing for a graph____ ── Topic: 3
-          └─■──Probability density estimation of distance scores using Gaussian kernel density estimation____ ── Topic: 7
+├─Function description and comparison including Gaussian kernel and sparse matrices____
+│    ├─■──Understanding the Purpose and Handling of a Function for Sparse Matrices with Inputs, Outputs, and P ── Topic: 9
+│    └─Understanding kernels and functions in the 'kernels.py' file for estimating PDF and computing simila
+│         ├─■──Purpose and functions of kernel-related functions in kernels.py file of a Python program, including  ── Topic: 22
+│         └─■──Understanding the cos_sim and cos_sim_torch functions in kernels.py file____ ── Topic: 25
+└─Graph message passing and adjacency matrix computation using embeddings____
+     ├─k-hop message passing and cosine similarity kernel computation for graph embeddings____
+     │    ├─k-hop message passing with adjacency matrix and node features____
+     │    │    ├─Computation of Gaussian Kernel Matrix between Two Sets of Embeddings using PyTorch____
+     │    │    │    ├─■──Cosine Similarity with PyTorch Tensors and Functional.____ ── Topic: 1
+     │    │    │    └─■──Function to compute adjacency matrix for embeddings using specified kernel type and threshold value_ ── Topic: 19
+     │    │    └─Message Passing and K-hop Aggregation in Graphs using Sparse Matrices and Node Features____
+     │    │         ├─■──Document pruning and adjacency matrix recomputation using embeddings and thresholding____ ── Topic: 11
+     │    │         └─k-hop message passing and adjacency matrix computation in sparse graphs.____
+     │    │              ├─■──Computing graph laplacian and degree matrix from pairwise distances using a given function.____ ── Topic: 7
+     │    │              └─■──Message Passing with K-hop Adjacency and Aggregated Features in Sparse Matrices____ ── Topic: 8
+     │    └─"Outlier Reduction Using Count-TF-IDF and OpenAI Representation Model"____
+     │         ├─Topic Modeling and Outlier Reduction in Natural Language Processing (NLP)____
+     │         │    ├─Understanding the compose_inference function in a chatbot system.____
+     │         │    │    ├─■──Processing conversation transcripts with Python functions____ ── Topic: 18
+     │         │    │    └─Understanding the compose_inference function in a chatbot conversation with message templates____
+     │         │    │         ├─■──Understanding the `compose_inference` Function in Chatbot Conversation Generation with OpenAI GPT___ ── Topic: 2
+     │         │    │         └─■──Function to create prompt message template with role and text input parameters and validation of rol ── Topic: 17
+     │         │    └─Outlier Reduction with Machine Learning Models____
+     │         │         ├─Document processing and reduction techniques for topic modeling with various machine learning models
+     │         │         │    ├─MiniLM language model for sentence embedding____
+     │         │         │    │    ├─■──Embedding sentences using MiniLM language model with multiprocessing and GPU acceleration____ ── Topic: 15
+     │         │         │    │    └─■──Embedding Sentences using Pre-Trained Language Model with SentenceTransformer Library____ ── Topic: 23
+     │         │         │    └─■──Topic modeling algorithms and document reduction techniques____ ── Topic: 0
+     │         │         └─SQLalchemy migrations in online mode with engine configuration____
+     │         │              ├─■──Probability Density Estimation with Gaussian Kernel Density Estimator____ ── Topic: 12
+     │         │              └─Running database migrations with SQLAlchemy and Alembic____
+     │         │                   ├─■──Graph network message passing & Mobile App Navigation System Design____ ── Topic: 21
+     │         │                   └─■──Running migrations with SQLAlchemy and Alembic in online mode____ ── Topic: 6
+     │         └─Class Settings definition using BaseSettings and its purpose for managing configuration in a third-p
+     │              ├─■──Empty class definition for managing application settings using Pydantic's BaseSettings____ ── Topic: 3
+     │              └─■──MemoryTreeManager class implementation____ ── Topic: 16
+     └─Codebase decomposition and analysis with Git repository and AST nodes.____
+          ├─Code decomposition and processing in Git repositories.____
+          │    ├─■──Python code parsing and analysis____ ── Topic: 4
+          │    └─Code decomposition in a Git repository____
+          │         ├─■──Decomposing Git Repositories with System Prompts.____ ── Topic: 10
+          │         └─Parsing and pruning files in a GitHub repository____
+          │              ├─■──parsing and pruning files in a local Git repository____ ── Topic: 5
+          │              └─■──purpose of `get_repo_contents` function in `repo_graph_generation.py` for retrieving and pruning Git ── Topic: 24
+          └─Analyzing chatbot main capabilities in a codebase using natural language processing and notable fram
+               ├─■──summarizing code in a GitHub repository using ChatGPT____ ── Topic: 14
+               └─Understanding Codebase Structure and Functionality with Hierarchical Trees and Frameworks____
+                    ├─■──Analyzing codebase structure and functionalities using a hierarchical topic tree____ ── Topic: 13
+                    └─■──Understanding the difference between format_system_prompts and format_system_prompts_with_tree in a  ── Topic: 20
+
+```
+w/ graph code bert embeddings
+```
+.
+├─"The Pipeline Class and Its Methods in GitModel Project"____
+│    ├─Probability Density Estimation using Gaussian KDE in SciPy____
+│    │    ├─Probability density function estimation using Gaussian kernel density estimation____
+│    │    │    ├─■──Probability density estimation with Gaussian kernel____ ── Topic: 16
+│    │    │    └─■──Understanding cos_sim_torch function and configuring context with URL and target metadata____ ── Topic: 14
+│    │    └─Empty class definition for MessageTreeManagerConfiguration in Python____
+│    │         ├─Empty class definition in MessageTreeManagerConfiguration with BaseModel inheritance.____
+│    │         │    ├─■──Questions about bug fixing with system prompts in kernel computation with tensors and matrices.____ ── Topic: 13
+│    │         │    └─Empty class definitions and inability to determine expected behavior of MemoryTreeManager class____
+│    │         │         ├─■──Purpose of run_migrations_online in Alembic environment file____ ── Topic: 12
+│    │         │         └─■──Empty class definition of MessageTreeManagerConfiguration inheriting from BaseModel____ ── Topic: 25
+│    │         └─Understanding the purpose of SemanticGraphContextGenerator and TopicModel classes in the codebase___
+│    │              ├─■──Purpose of Pipeline class in codebase with SemanticGraphContextGenerator, MessageTreeManagerConfigur ── Topic: 15
+│    │              └─■──Understanding the purpose and usage of TopicModel class in dimensional tensors and input shape setti ── Topic: 20
+│    └─GitModel Pipeline class with find_files_with_substring method____
+│         ├─GitModel Pipeline Class and find_files_with_substring Method Description____
+│         │    ├─■──Understanding the `clone_and_create_context_folder` Function____ ── Topic: 4
+│         │    └─GitModel Pipeline class and methods for searching files with substring____
+│         │         ├─GitModel Pipeline class and methods for file searching____
+│         │         │    ├─■──Python class for loading and initializing configuration values from a YAML file with dynamic imports ── Topic: 9
+│         │         │    └─■──The Pipeline class and its methods in GitModel project configuration and file searching.____ ── Topic: 10
+│         │         └─■──Python Pipeline Class for Generating a Semantic Graph Context for Git Repository Data Processing____ ── Topic: 8
+│         └─■──Cloning and Storing Repository in "Work" Folder with Custom Name using Python Function____ ── Topic: 22
+└─Understanding the purpose and input of a Pipeline class in a project involving semantic graphs and e
+     ├─Topic Modeling with Hierarchical Topics and Outlier Reduction Strategies in Python____
+     │    ├─Working with context folders and creating directories using os module.____
+     │    │    ├─■──Creating a work folder and cloning a repository to create a context folder in Python____ ── Topic: 18
+     │    │    └─■──Working with context and folder paths in Python____ ── Topic: 3
+     │    └─■──Topic modeling and representation using hierarchical and ctfidf models____ ── Topic: 5
+     └─PyTorch function for computing Gaussian kernel matrix and k-hop message passing on an adjacency matr
+          ├─Compute k-hop adjacency matrix and aggregated features using message passing in graph analysis.____
+          │    ├─k-hop message passing with adjacency matrix and node features____
+          │    │    ├─■──Document Pruning and Adjacency Matrix Recomputation____ ── Topic: 23
+          │    │    └─Computing k-hop adjacency matrix with message passing in graph neural networks.____
+          │    │         ├─■──Computing k-hop adjacency matrix and aggregated features using message passing____ ── Topic: 0
+          │    │         └─■──GNNHead class for computing kernel matrix with node features in numpy array____ ── Topic: 1
+          │    └─Data Migrations in Offline Mode.____
+          │         ├─■──Degree matrix computation using adjacency distance matrix and pairwise distances in Python____ ── Topic: 21
+          │         └─■──SQLAlchemy migration in 'offline' mode____ ── Topic: 11
+          └─Understanding code inputs and purpose in a Pipeline class____
+               ├─Parsing Python files using AST module and extracting specific information____
+               │    ├─■──Cosine Similarity Computation using PyTorch and NumPy____ ── Topic: 6
+               │    └─■──Python code parsing and data extraction using AST____ ── Topic: 17
+               └─Code Structure and Purpose of Pipeline Class with Config and Semantic Graph Context Generator in Pyt
+                    ├─Code for a Pipeline with Semantic Graph Context Generator____
+                    │    ├─■──Understanding Pipeline Class and Semantic Graph Context Generation in Python Code____ ── Topic: 24
+                    │    └─■──Summarizing code in a GitHub repository using ChatGPT____ ── Topic: 2
+                    └─Semantic Graph Context Generator Class and Methods____
+                         ├─■──Semantic Graph Context Generation for Git Repositories.____ ── Topic: 19
+                         └─■──Implementation of class instantiation using configuration and dictionary mapping.____ ── Topic: 7
 ```
 
 ### DeepMind CLRS
