@@ -1,27 +1,48 @@
-import argparse
-from getpass import getpass
-
 import openai
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel
 
 from src import Pipeline
 
-if __name__ == "__main__":
-    argsparse = argparse.ArgumentParser()
-    argsparse.add_argument("--config", type=str, default="./test_config.yaml")
-    argsparse.add_argument("--repo", type=str, default="https://github.com/danielpatrickhug/GitModel.git")
-    argsparse.add_argument("--repo_name", type=str, default="gitmodel1")
+app = FastAPI()
 
-    args = argsparse.parse_args()
+# Add the CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-    openai_secret = getpass("Enter the secret key: ")
-    # Set up OpenAI API credentials
+
+class AnalyzeRepoInput(BaseModel):
+    config: str
+    repo: str
+    repo_name: str
+    openai_secret: str
+
+
+@app.post("/api/topic-modeling")
+async def analyze_repo(input_data: AnalyzeRepoInput):
+    openai_secret = input_data.openai_secret
     openai.api_key = openai_secret
 
-    print("starting pipeline")
-    pipeline = Pipeline.from_yaml(args.config)
-    gnn_head_outputs, topic_model_outputs = pipeline.run(args.repo, args.repo_name)
-    for i, topic_model_output in enumerate(topic_model_outputs):
-        topic_model_output["data"].to_csv(f"context/{args.repo_name}_topic_model_outputs_{i}.csv")
-        topic_model_output["topic_info"].to_csv(f"context/{args.repo_name}_topic_info_{i}.csv")
-        with open(f"context/{args.repo_name}_tree_{i}.txt", "w", encoding="utf-8") as f:
-            f.write(topic_model_output["tree"])
+    pipeline = Pipeline.from_yaml(input_data.config)
+    try:
+        gnn_head_outputs, topic_model_outputs = pipeline.run(input_data.repo, input_data.repo_name)
+        if topic_model_outputs:
+            topic_model_output = topic_model_outputs[0]
+            return JSONResponse(content=topic_model_output["tree"])
+        else:
+            raise HTTPException(status_code=400, detail="Error processing topic model")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0", port=8000)

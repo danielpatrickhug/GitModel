@@ -76,9 +76,12 @@ class TopicModel:
         if self.config["auto_cluster"]:
             if self.config["representation_model"].split("(")[0] == "pipeline":
                 generator = self.config["representation_model"]
-                representation_model = TextGeneration(eval(generator))
+                representation_model = [MaximalMarginalRelevance(diversity=0.3), TextGeneration(eval(generator))]
             elif self.config["representation_model"].split("(")[0] == "OpenAI":
-                representation_model = eval(self.config["representation_model"])
+                representation_model = [
+                    MaximalMarginalRelevance(diversity=0.3),
+                    eval(self.config["representation_model"]),
+                ]
             else:
                 lg.info("Using MaximalMarginalRelevance as representation model")
                 representation_model = MaximalMarginalRelevance(diversity=0.3)

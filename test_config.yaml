@@ -41,7 +41,7 @@ topic_model:
       metric='cosine')
     vectorizer_model: CountVectorizer(stop_words="english")
     representation_model:
-      pipeline('text2text-generation', model='tloen/alpaca-lora-7b')
+      OpenAI(model="gpt-3.5-turbo", delay_in_seconds=3, chat=True)
     hierarchical_linkage_fn: sch.linkage(x, 'single', optimal_ordering=True)
     with_tree: True
     auto_cluster: True
