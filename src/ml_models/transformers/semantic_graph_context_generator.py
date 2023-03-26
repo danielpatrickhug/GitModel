@@ -77,6 +77,7 @@ class SemanticGraphContextGenerator:
                             print(sub_text_block)
                             print()
                             messages, reply_text = self.compose_inference(sub_text_block[:2000], messages)
+                            print(reply_text)
                             row = {
                                 "git_repo_path": git_repo_path,
                                 "file_name": file_name,
