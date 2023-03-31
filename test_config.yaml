@@ -2,7 +2,7 @@ pipeline_settings:
   - __impl__: PipelineSettings
     combine_gnn_strategy: none
     norm_fn: none
-    skip_graph_creation: False
+    skip_graph_creation: True
 
 semantic_graph_context_generator:
   - __impl__: SemanticGraphContextGenerator
@@ -34,7 +34,8 @@ topic_model:
       umap_model = UMAP(n_neighbors=15, n_components=5, min_dist=0.0,
       metric='cosine')
     vectorizer_model: CountVectorizer(stop_words="english")
-    representation_model: OpenAI(model="gpt-3.5-turbo", delay_in_seconds=3, chat=True)
+    representation_model:
+      OpenAI(model="gpt-3.5-turbo", delay_in_seconds=3, chat=True)
     hierarchical_linkage_fn: sch.linkage(x, 'single', optimal_ordering=True)
     with_tree: True
     auto_cluster: True

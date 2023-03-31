@@ -1,20 +1,23 @@
 # GitModel
 
-GitModel can generate high quality topic models of github repos using GPT, GNN message passing layers and BERTopic.
+GitModel can generate high quality topic models of github repos using GPT, GNN
+message passing layers and BERTopic.
 
-- Generate documentation for Python repos and create enriched subgraphs for your codebases
+- Generate documentation for Python repos and create enriched subgraphs for your
+  codebases
 - Swap system prompt tasks(bug hunting, todo, documentation labeling, etc) for
-  enriching semantic graph and dataset building. 
-    - The generated data is saved to context folder. 
-    - in src/format_system_prompts. w/ tree works but it requires manual changing one line of code. will fix soon
+  enriching semantic graph and dataset building.
+  - The generated data is saved to context folder.
+  - in src/format_system_prompts. w/ tree works but it requires manual changing
+    one line of code. will fix soon
 - GNN Message Passing and Topic modeling pipeline as an inductive bias (GRNN)
 - BERTopic is highly customizable and can compose several different clustering,
   embedding, vectorizers, bag of words and dimensionality reduction techniques.
 - Change optics by swapping categorical objects in the pipeline swap
   umap_hdbscan with svd_kmeans or transform adj_matrix to graph laplacian
-- If youre new to GNN's I recommend computing the SVD on your adj matricies and seeing how the components change before and after message passing.
+- If youre new to GNN's I recommend computing the SVD on your adj matricies and
+  seeing how the components change before and after message passing.
   - Mess around with the connection threshold param before adding a RELU
-
 
 Contributions Welcome! This is a great guide for how to make a pull request
 
@@ -55,9 +58,9 @@ if __name__ == "__main__":
 ```
 
 ## Topic model your dependencies.
+
 If you have enough patience or a lot of money to afford more then one computer.
 run GitModel on /venv/lib/python3.10/site-packages
-
 
 ## Bootstrap Ability
 
@@ -133,7 +136,9 @@ and improved text generation capabilities.
                     └─■──Understanding the difference between format_system_prompts and format_system_prompts_with_tree in a  ── Topic: 20
 
 ```
+
 w/ graph code bert embeddings
+
 ```
 .
 ├─"The Pipeline Class and Its Methods in GitModel Project"____
