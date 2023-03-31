@@ -10,6 +10,7 @@ message passing layers and BERTopic.
   - The generated data is saved to context folder.
   - in src/format_system_prompts. w/ tree works but it requires manual changing
     one line of code. will fix soon
+- Pre-commit for isort, prettier, detect private_keys, black, flake8, and more.
 - GNN Message Passing and Topic modeling pipeline as an inductive bias (GRNN)
 - BERTopic is highly customizable and can compose several different clustering,
   embedding, vectorizers, bag of words and dimensionality reduction techniques.
