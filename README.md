@@ -1,4 +1,4 @@
-# GitModel
+# GitModel (Graph Intelligence Tensor)
 
 ![Self Portrait](images/self_portrait.jpg)
 
