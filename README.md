@@ -64,7 +64,7 @@ if __name__ == "__main__":
         topic_model_output["topic_info"].to_csv(f"context/{args.repo_name}_topic_info_{i}.csv")
         with open(f"context/{args.repo_name}_tree_{i}.txt", "w", encoding="utf-8") as f:
             f.write(topic_model_output["tree"])
-
+```
 ## Topic model your dependencies.
 
 If you have enough patience or a lot of money to afford more then one computer.
