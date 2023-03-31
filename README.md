@@ -16,11 +16,7 @@ message passing layers and BERTopic.
 - GNN Message Passing and Topic modeling pipeline as an inductive bias (GRNN)
 - BERTopic is highly customizable and can compose several different clustering,
   embedding, vectorizers, bag of words and dimensionality reduction techniques.
-- Change optics by swapping categorical objects in the pipeline swap
-  umap_hdbscan with svd_kmeans or transform adj_matrix to graph laplacian
-- If youre new to GNN's I recommend computing the SVD on your adj matricies and
-  seeing how the components change before and after message passing.
-  - Mess around with the connection threshold param before adding a RELU
+
 
 Contributions Welcome! This is a great guide for how to make a pull request
 
