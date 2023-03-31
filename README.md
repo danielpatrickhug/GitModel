@@ -16,7 +16,7 @@ message passing layers and BERTopic.
 - GNN Message Passing and Topic modeling pipeline as an inductive bias (GRNN)
 - BERTopic is highly customizable and can compose several different clustering,
   embedding, vectorizers, bag of words and dimensionality reduction techniques.
-
+- add https://github.com/Instagram/LibCST
 
 Contributions Welcome! This is a great guide for how to make a pull request
 
