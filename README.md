@@ -2,7 +2,7 @@
 
 ![Self Portrait](images/self_portrait.jpg)
 
-GitModel can generate high quality topic models of github repos using GPT, GNN
+GitModel is a pipeline that can generate high quality topic models of github repos using GPT, GNN
 message passing layers and BERTopic.
 
 - Generate documentation for Python repos and create enriched subgraphs for your
