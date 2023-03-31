@@ -2,7 +2,7 @@ pipeline_settings:
   - __impl__: PipelineSettings
     combine_gnn_strategy: none
     norm_fn: none
-    skip_graph_creation: True
+    skip_graph_creation: False
 
 semantic_graph_context_generator:
   - __impl__: SemanticGraphContextGenerator
