@@ -1,9 +1,11 @@
 astor
 bertopic
 GitPython
+networkx
 numpy
 openai
 pandas
+pre-commit
 scipy
 sentence-transformers
 torch
