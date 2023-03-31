@@ -6,13 +6,7 @@ pipeline_settings:
 
 semantic_graph_context_generator:
   - __impl__: SemanticGraphContextGenerator
-    generator_id: summary
-    model_id: gpt-3.5-turbo
-    temperature: 0
-    max_tokens: 500
-    with_tree: False
-  - __impl__: SemanticGraphContextGenerator
-    generator_id: qa_chain
+    generator_id: self-instruction
     model_id: gpt-3.5-turbo
     temperature: 0
     max_tokens: 500
