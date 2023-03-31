@@ -1,6 +1,7 @@
 import networkx as nx
 from networkx.algorithms import community
 
+
 def community_detection(A):
     # Convert the adjacency matrix to a NetworkX graph
     G = nx.from_numpy_array(A)
@@ -16,16 +17,17 @@ def community_detection(A):
 
     return sorted_communities
 
+
 def print_communities(data, A):
     # Print sorted communities
     sorted_communities = community_detection(data, A)
-    for i, community in enumerate(sorted_communities):
+    for i, com in enumerate(sorted_communities):
         print(f"Community {i + 1}:")
-        print(f"Nodes: {list(community)}")
+        print(f"Nodes: {list(com)}")
         component_files_structure = []
         component_text_structure = []
         component_history_structure = []
-        for row_key in list(community):
+        for row_key in list(com):
             file_component = data.loc[row_key, "file_name"]
             text_component = data.loc[row_key, "assistant_reply"]
             history_component = data.loc[row_key, "conversation_history"]
@@ -42,7 +44,7 @@ def print_communities(data, A):
 
 
 def dfs(v, visited, adj_matrix, component):
-    '''Depth-first search algorithm.'''
+    """Depth-first search algorithm."""
     visited[v] = True
     component.append(v)
     for i, val in enumerate(adj_matrix[v]):
@@ -51,7 +53,7 @@ def dfs(v, visited, adj_matrix, component):
 
 
 def connected_components(adj_matrix):
-    '''Find connected components in a graph represented by an adjacency matrix.'''
+    """Find connected components in a graph represented by an adjacency matrix."""
     visited = [False for _ in range(adj_matrix.shape[0])]
     components = []
 
