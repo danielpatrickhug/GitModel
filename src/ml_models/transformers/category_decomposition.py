@@ -8,7 +8,6 @@ openai_secret = getpass("Enter the secret key: ")
 openai.api_key = openai_secret
 
 
-
 def chat_gpt_inference(messages: list):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
@@ -34,6 +33,7 @@ def compose_inference(text_block, messages):
     messages.append(assistant_template)
     return messages, reply_text
 
+
 def category_generation(topic: str, topic_reasoning_chain: list):
     """Decompose a category into its constituent parts.
 
@@ -51,20 +51,19 @@ def category_generation(topic: str, topic_reasoning_chain: list):
     with open(topic_reasoning_chain, "r") as f:
         segments = f.readlines()
 
-
     with open("ct_output_file.jsonl", "a") as f:
         for i, line in enumerate(segments):
             # print(line)
             topic = eval(line)["label"]
             print(topic)
-            text_block = prompt = f"""Please provide a description of {topic} within a categorical framework,
+            prompt = f"""Please provide a description of {topic} within a categorical framework,
                                         detailing the objects and morphisms that represent its essential components. Offer a brief summary of these objects and
                                         morphisms as they pertain to the category specific to {topic}."""
             try:
-                messages, reply_text = compose_inference(text_block, messages)
+                messages, reply_text = compose_inference(prompt, messages)
 
             except Exception:
-                messages, reply_text = compose_inference(text_block, [{"role": "system", "content": system_prompt}])
+                messages, reply_text = compose_inference(prompt, [{"role": "system", "content": system_prompt}])
             print(reply_text)
             print()
             row = {
