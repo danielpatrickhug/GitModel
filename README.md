@@ -18,7 +18,8 @@ message passing layers and BERTopic.
   embedding, vectorizers, bag of words and dimensionality reduction techniques.
 
 
-Warning: Not under active development. A more expansive system is under active @ https://github.com/Neural-Dragon-AI
+Warning: Not under active development. A more expansive system is active @ https://github.com/Neural-Dragon-AI - currently private.
+A preview from the org can be seen here including the openbugger and babydragon package https://www.youtube.com/live/BbUOoGfpjvQ?feature=share&t=18645
 
 - https://github.com/huggingface/diffusers/blob/main/CONTRIBUTING.md
 
