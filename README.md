@@ -18,7 +18,7 @@ message passing layers and BERTopic.
   embedding, vectorizers, bag of words and dimensionality reduction techniques.
 
 
-Contributions Welcome! This is a great guide for how to make a pull request
+Warning: Not under active development. A more expansive system is under active @ https://github.com/Neural-Dragon-AI
 
 - https://github.com/huggingface/diffusers/blob/main/CONTRIBUTING.md
 
