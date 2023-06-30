@@ -5,7 +5,7 @@
 GitModel is a pipeline that can generate high quality topic models of github repos using GPT, GNN
 message passing layers and BERTopic.
 
-⚠️Warning: Not under active development. A more expansive system is active @ https://github.com/Neural-Dragon-AI - currently private.
+⚠️Warning: Not under active development. A more expansive system is actively being developed @ https://github.com/Neural-Dragon-AI - currently private.
 A preview from the org can be seen here including the openbugger and babydragon package https://www.youtube.com/live/BbUOoGfpjvQ?feature=share&t=18645
 - Generate documentation for Python repos and create enriched subgraphs for your
   codebases
